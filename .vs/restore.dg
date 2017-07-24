@@ -1,3 +1,5 @@
-#:C:\Users\sclar\Documents\visual studio 2015\Projects\MyTrx\MyTrxApi\MyTrx.Api.xproj
-C:\Users\sclar\Documents\visual studio 2015\Projects\MyTrx\MyTrxApi\MyTrx.Api.xproj|C:\Users\sclar\Documents\visual studio 2015\Projects\MyTrx\MyTrxBL\MyTrx.BusinessLogic.xproj
-C:\Users\sclar\Documents\visual studio 2015\Projects\MyTrx\MyTrxBL\MyTrx.BusinessLogic.xproj|C:\Users\sclar\Documents\visual studio 2015\Projects\MyTrx\MyTrxData\MyTrx.Data.xproj
+#:C:\Dev\MisDevs\MyTrx\MyTrx.BusinessLogic\MyTrx.BusinessLogic.xproj
+C:\Dev\MisDevs\MyTrx\MyTrx.BusinessLogic\MyTrx.BusinessLogic.xproj|C:\Dev\MisDevs\MyTrx\MyTrx.Data\MyTrx.Data.xproj
+#:C:\Dev\MisDevs\MyTrx\MyTrxApi\MyTrx.Api.xproj
+C:\Dev\MisDevs\MyTrx\MyTrxApi\MyTrx.Api.xproj|C:\Dev\MisDevs\MyTrx\MyTrx.BusinessLogic\MyTrx.BusinessLogic.xproj
+C:\Dev\MisDevs\MyTrx\MyTrx.BusinessLogic\MyTrx.BusinessLogic.xproj|C:\Dev\MisDevs\MyTrx\MyTrx.Data\MyTrx.Data.xproj

@@ -15,7 +15,7 @@
       "version": "1.0.1",
       "type": "platform"
     },
-    "MyTrxBL": "1.0.0-*"
+    "MyTrx.BusinessLogic": "1.0.0-*"
   },
 
   "tools": {

@@ -14,16 +14,20 @@ namespace MyTrx.Api.Controllers
     {
         private readonly ITransactionsQueryService _queryService;
 
-        public TransactionsController(TransactionsQueryService queryService)
-        {
-            _queryService = queryService;
-        }
+        //public TransactionsController(TransactionsQueryService queryService)
+        //{
+        //    _queryService = queryService;
+        //}
 
         // GET: api/transactions
         [HttpGet]
         public IEnumerable<TransactionModel> Get(object options = null)
         {
-            return _queryService.GetAll(options); 
+            return new List<TransactionModel> {
+                new TransactionModel {Amount = 500 },
+                new TransactionModel { Amount = -300}
+            };
+            //return _queryService.GetAll(options); 
         }
 
         // GET api/transactions/5
