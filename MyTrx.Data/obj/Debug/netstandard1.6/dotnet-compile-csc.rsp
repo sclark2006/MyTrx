@@ -10,6 +10,8 @@
 -nologo
 "C:\Dev\MisDevs\MyTrx\MyTrx.Data\obj\Debug\netstandard1.6\dotnet-compile.assemblyinfo.cs"
 -out:"C:\Dev\MisDevs\MyTrx\MyTrx.Data\bin\Debug\netstandard1.6\MyTrx.Data.dll"
+-r:"C:\Users\sclar\.nuget\packages\Autofac\4.6.0\lib\netstandard1.1\Autofac.dll"
+-r:"C:\Users\sclar\.nuget\packages\Autofac.Extensions.DependencyInjection\4.2.0\lib\netstandard1.1\Autofac.Extensions.DependencyInjection.dll"
 -r:"C:\Users\sclar\.nuget\packages\Microsoft.CSharp\4.3.0\ref\netstandard1.0\Microsoft.CSharp.dll"
 -r:"C:\Users\sclar\.nuget\packages\Microsoft.EntityFrameworkCore\1.1.1\lib\netstandard1.3\Microsoft.EntityFrameworkCore.dll"
 -r:"C:\Users\sclar\.nuget\packages\Microsoft.EntityFrameworkCore.Relational\1.1.1\lib\netstandard1.3\Microsoft.EntityFrameworkCore.Relational.dll"

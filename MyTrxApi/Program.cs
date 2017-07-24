@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
+using Autofac.Extensions.DependencyInjection;
+
 
 namespace MyTrx.Api
 {
@@ -14,6 +16,7 @@ namespace MyTrx.Api
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .ConfigureServices(services => services.AddAutofac())
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()

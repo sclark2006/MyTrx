@@ -12,6 +12,8 @@
 --version:1.0.0.0
 --informational-version:1.0.0
 --target-framework:.NETStandard,Version=v1.6
+--reference:C:\Users\sclar\.nuget\packages\Autofac\4.6.0\lib\netstandard1.1\Autofac.dll
+--reference:C:\Users\sclar\.nuget\packages\Autofac.Extensions.DependencyInjection\4.2.0\lib\netstandard1.1\Autofac.Extensions.DependencyInjection.dll
 --reference:C:\Users\sclar\.nuget\packages\Microsoft.CSharp\4.3.0\ref\netstandard1.0\Microsoft.CSharp.dll
 --reference:C:\Users\sclar\.nuget\packages\Microsoft.EntityFrameworkCore\1.1.1\lib\netstandard1.3\Microsoft.EntityFrameworkCore.dll
 --reference:C:\Users\sclar\.nuget\packages\Microsoft.EntityFrameworkCore.Relational\1.1.1\lib\netstandard1.3\Microsoft.EntityFrameworkCore.Relational.dll

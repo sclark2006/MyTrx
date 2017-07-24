@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.6/",
-    "signature": "d15d333443f092aa70fac3e745ce002699da1f32"
+    "signature": "1af474944373450cab036827518b83d65de9852c"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,11 +9,32 @@
     ".NETStandard,Version=v1.6/": {
       "MyTrx.BusinessLogic/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "MyTrx.Data": "1.0.0",
           "NETStandard.Library": "1.6.1"
         },
         "runtime": {
           "MyTrx.BusinessLogic.dll": {}
+        }
+      },
+      "Autofac/4.6.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.2.0": {
+        "dependencies": {
+          "Autofac": "4.6.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -1235,6 +1256,8 @@
       },
       "MyTrx.Data/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "Microsoft.EntityFrameworkCore": "1.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
           "NETStandard.Library": "1.6.1"
@@ -1250,6 +1273,16 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Autofac/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y+7B007u3cYpjU4THI9/i2pSyRnHjZtRJOrjGiHYPH5C32jJZ5njWjgLVnI6nmsYjUrYcWjXLfB13J3ztd37cw=="
+    },
+    "Autofac.Extensions.DependencyInjection/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cqBmgg9y7ahGbt7CPdvZFL6bA0PEwFyhIofUoUxEteZc+d0yNnE6ZvIWxHEM2F2HPJlC9SRnHWiZQq8r53moAw=="
     },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",

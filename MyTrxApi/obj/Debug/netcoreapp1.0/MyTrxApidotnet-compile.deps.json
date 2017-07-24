@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0/",
-    "signature": "cd8f573ad85d3d31d2fde5e92b2e463e2b73c19c"
+    "signature": "9e6ba9b7af8de8b98df062b2f82bd29d076ea4da"
   },
   "compilationOptions": {
     "defines": [
@@ -16,6 +16,8 @@
     ".NETCoreApp,Version=v1.0": {
       "MyTrxApi/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "Microsoft.AspNetCore.Mvc": "1.0.1",
           "Microsoft.AspNetCore.Routing": "1.0.1",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
@@ -32,6 +34,25 @@
         },
         "compile": {
           "MyTrxApi.dll": {}
+        }
+      },
+      "Autofac/4.6.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.2.0": {
+        "dependencies": {
+          "Autofac": "4.6.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "Libuv/1.9.0": {
@@ -2685,6 +2706,8 @@
       },
       "MyTrx.BusinessLogic/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "MyTrx.Data": "1.0.0",
           "NETStandard.Library": "1.6.1"
         },
@@ -2694,6 +2717,8 @@
       },
       "MyTrx.Data/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "Microsoft.EntityFrameworkCore": "1.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
           "NETStandard.Library": "1.6.1"
@@ -2706,6 +2731,8 @@
     ".NETCoreApp,Version=v1.0/": {
       "MyTrxApi/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "Microsoft.AspNetCore.Mvc": "1.0.1",
           "Microsoft.AspNetCore.Routing": "1.0.1",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
@@ -2722,6 +2749,25 @@
         },
         "runtime": {
           "MyTrxApi.dll": {}
+        }
+      },
+      "Autofac/4.6.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.2.0": {
+        "dependencies": {
+          "Autofac": "4.6.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "Libuv/1.9.0": {
@@ -5264,6 +5310,8 @@
       },
       "MyTrx.BusinessLogic/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "MyTrx.Data": "1.0.0",
           "NETStandard.Library": "1.6.1"
         },
@@ -5273,6 +5321,8 @@
       },
       "MyTrx.Data/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "Microsoft.EntityFrameworkCore": "1.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
           "NETStandard.Library": "1.6.1"
@@ -5288,6 +5338,16 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Autofac/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y+7B007u3cYpjU4THI9/i2pSyRnHjZtRJOrjGiHYPH5C32jJZ5njWjgLVnI6nmsYjUrYcWjXLfB13J3ztd37cw=="
+    },
+    "Autofac.Extensions.DependencyInjection/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cqBmgg9y7ahGbt7CPdvZFL6bA0PEwFyhIofUoUxEteZc+d0yNnE6ZvIWxHEM2F2HPJlC9SRnHWiZQq8r53moAw=="
     },
     "Libuv/1.9.0": {
       "type": "package",

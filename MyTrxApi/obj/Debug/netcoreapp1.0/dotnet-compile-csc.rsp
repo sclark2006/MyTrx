@@ -9,6 +9,8 @@
 -nologo
 "C:\Dev\MisDevs\MyTrx\MyTrxApi\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
 -out:"C:\Dev\MisDevs\MyTrx\MyTrxApi\bin\Debug\netcoreapp1.0\MyTrxApi.dll"
+-r:"C:\Users\sclar\.nuget\packages\Autofac\4.6.0\lib\netstandard1.1\Autofac.dll"
+-r:"C:\Users\sclar\.nuget\packages\Autofac.Extensions.DependencyInjection\4.2.0\lib\netstandard1.1\Autofac.Extensions.DependencyInjection.dll"
 -r:"C:\Users\sclar\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\sclar\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authorization.dll"
 -r:"C:\Users\sclar\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Cors.dll"
@@ -177,4 +179,5 @@
 -resource:"C:\Dev\MisDevs\MyTrx\MyTrxApi\obj\Debug\netcoreapp1.0\MyTrxApidotnet-compile.deps.json",MyTrxApi.deps.json
 "C:\Dev\MisDevs\MyTrx\MyTrxApi\Program.cs"
 "C:\Dev\MisDevs\MyTrx\MyTrxApi\Startup.cs"
+"C:\Dev\MisDevs\MyTrx\MyTrxApi\Config\AutofacApiModule.cs"
 "C:\Dev\MisDevs\MyTrx\MyTrxApi\Controllers\TransactionsController.cs"
