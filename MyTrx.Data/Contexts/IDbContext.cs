@@ -21,5 +21,7 @@ namespace MyTrx.Data.Contexts
         DatabaseFacade Database { get; }
         //DbContextOptions Options { get; }
         ChangeTracker ChangeTracker { get; }
+        TEntity Find<TEntity>(params object[] keyValues) where TEntity : class;
+
     }
 }

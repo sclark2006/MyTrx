@@ -64,7 +64,7 @@ namespace MyTrx.Data.Repositories
 
         public T GetById<T>(int id) where T : class, IEntity
         {
-            T entity = _dbContext.Set<T>().FirstOrDefault(x => x.Id == id);
+            T entity = _dbContext.Find<T>(id);
             return entity;
 
         }
