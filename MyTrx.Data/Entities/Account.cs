@@ -17,13 +17,13 @@ namespace MyTrx.Data.Entities
         public AccountType AccountType { get; set; }
         public string Note { get; set; }
         public bool IsOpen { get; set; }
-        public virtual IEnumerable<Transaction> Transactions { get; set; }
+        //public virtual IEnumerable<Transaction> Transactions { get; set; }
         public DateTime CreatedDate { get; set; }
 
 
         public Account()
         {
-            Transactions = new List<Transaction>();
+            //Transactions = new List<Transaction>();
         }
     }
 }

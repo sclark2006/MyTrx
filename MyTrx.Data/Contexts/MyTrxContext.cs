@@ -1,18 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
-///using MySQL.Data.EntityFrameworkCore.Extensions;
+using MySQL.Data.EntityFrameworkCore.Extensions;
 using MyTrx.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MyTrx.Data.Contexts
 {
-    public class MyTrxContext : DbContext
+    public class MyTrxContext : DbContext, IDbContext
     {
-        public MyTrxContext(DbContextOptions<MyTrxContext> options)
-        : base(options)
-        { }
+        public readonly string _connectionString;
+        
+        public MyTrxContext(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseMySQL(_connectionString);
+        }
 
         public DbSet<Transaction> Transactions { get; set; }
     }

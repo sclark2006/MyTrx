@@ -38,8 +38,8 @@ namespace MyTrx.Api
             // Add framework services.
             services.AddMvc().AddControllersAsServices();
 
-            var builder = new ContainerBuilder();
-            builder.RegisterModule(new AutofacDataModule());
+            var builder = new ContainerBuilder(); 
+            builder.RegisterModule(new AutofacDataModule(Configuration.GetConnectionString("MySqlConnection")));
             builder.RegisterModule(new AutofacBLModule());
             //builder.RegisterModule(new AutofacApiModule());
             builder.Populate(services);

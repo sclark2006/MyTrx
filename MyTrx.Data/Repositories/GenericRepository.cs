@@ -18,7 +18,7 @@ namespace MyTrx.Data.Repositories
             _dbContext = dbContext;
         }
 
-        public T Create<T>(T entity) where T : class, new()
+        public T Create<T>(T entity) where T : class
         {
             T newEntity = _dbContext.Set<T>().Add(entity).Entity;
             return newEntity;
@@ -30,7 +30,7 @@ namespace MyTrx.Data.Repositories
             entry.State = EntityState.Modified;
         }
 
-        public void Delete<T>(T entity) where T : class, new()
+        public void Delete<T>(T entity) where T : class
         {
             if (_dbContext.Entry(entity).State == EntityState.Detached)
             {
@@ -39,7 +39,7 @@ namespace MyTrx.Data.Repositories
             _dbContext.Set<T>().Remove(entity);
         }
 
-        public void Delete<T>(int id) where T : class, IEntity, new()
+        public void Delete<T>(int id) where T : class, IEntity
         {
             var entity = GetById<T>(id);
             Delete<T>(entity);
@@ -47,31 +47,22 @@ namespace MyTrx.Data.Repositories
 
         public void Dispose()
         {
-            //_dbContext.Dispose();
+            _dbContext.Dispose();
         }
 
-        public IQueryable<T> FindBy<T>(Expression<Func<T, bool>> predicate) where T : class, new()
+        public IQueryable<T> FindBy<T>(Expression<Func<T, bool>> predicate) where T : class
         {
             var query = _dbContext.Set<T>().Where(predicate);
             return query;
         }
 
-        public IQueryable<T> GetAll<T>(object options) where T : class, new()
+        public IQueryable<T> GetAll<T>(object options) where T : class
         {
-            var list = new List<T>();
-            list.Add(new T());
-            list.Add(new T());
-            list.Add(new T());
-            return list.AsQueryable();
-            //return new List<T> {
-            //    (T)(new Transaction { Amount = 500 }),
-            //    (T)new Transaction { Amount = -300}
-            //}.AsQueryable<T>();
-            //var query = _dbContext.Set<T>();
-            //return query;
+            var query = _dbContext.Set<T>();
+            return query;
         }
 
-        public T GetById<T>(int id) where T : class, IEntity, new()
+        public T GetById<T>(int id) where T : class, IEntity
         {
             T entity = _dbContext.Set<T>().FirstOrDefault(x => x.Id == id);
             return entity;

@@ -6,6 +6,7 @@
     "Autofac.Extensions.DependencyInjection": "4.2.0",
     "Microsoft.EntityFrameworkCore": "1.1.1",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
+    "MySql.Data.EntityFrameworkCore": "8.0.8-dmr",
     "NETStandard.Library": "1.6.0"
   },
 
