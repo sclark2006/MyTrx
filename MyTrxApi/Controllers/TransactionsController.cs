@@ -15,14 +15,10 @@ namespace MyTrx.Api.Controllers
         private readonly ITransactionsQueryService _queryService;
 
 
-        public TransactionsController()
+        public TransactionsController(ITransactionsQueryService queryService)
         {
-            _queryService = new TransactionsQueryService();
+            _queryService = queryService;
         }
-        //public TransactionsController(ITransactionsQueryService queryService)
-        //{
-        //    _queryService = queryService;
-        //}
 
         // GET: api/transactions
         [HttpGet]

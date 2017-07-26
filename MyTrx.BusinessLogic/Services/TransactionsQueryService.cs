@@ -17,10 +17,6 @@ namespace MyTrx.BusinessLogic.Services
             _repository = repository;
         }
 
-        public TransactionsQueryService()
-        {
-
-        }
 
         public TransactionModel GetById(int id) {
             var trx = _repository.GetById<Transaction>(id);
@@ -29,12 +25,8 @@ namespace MyTrx.BusinessLogic.Services
 
         public IEnumerable<TransactionModel> GetAll(object options)
         {
-            return new List<TransactionModel> {
-                new TransactionModel {Amount = 500 },
-                new TransactionModel { Amount = -300}
-            };
-            //var transactions = _repository.GetAll<Transaction>(options).ToList();
-            //return transactions.Select(entity => MapToModel(entity));
+            var transactions = _repository.GetAll<Transaction>(options).ToList();
+            return transactions.Select(entity => MapToModel(entity));
         }
 
         public TransactionModel MapToModel(Transaction transaction)

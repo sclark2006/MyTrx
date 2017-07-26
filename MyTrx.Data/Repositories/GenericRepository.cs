@@ -47,7 +47,7 @@ namespace MyTrx.Data.Repositories
 
         public void Dispose()
         {
-            _dbContext.Dispose();
+            //_dbContext.Dispose();
         }
 
         public IQueryable<T> FindBy<T>(Expression<Func<T, bool>> predicate) where T : class, new()
@@ -58,8 +58,17 @@ namespace MyTrx.Data.Repositories
 
         public IQueryable<T> GetAll<T>(object options) where T : class, new()
         {
-            var query = _dbContext.Set<T>();
-            return query;
+            var list = new List<T>();
+            list.Add(new T());
+            list.Add(new T());
+            list.Add(new T());
+            return list.AsQueryable();
+            //return new List<T> {
+            //    (T)(new Transaction { Amount = 500 }),
+            //    (T)new Transaction { Amount = -300}
+            //}.AsQueryable<T>();
+            //var query = _dbContext.Set<T>();
+            //return query;
         }
 
         public T GetById<T>(int id) where T : class, IEntity, new()
