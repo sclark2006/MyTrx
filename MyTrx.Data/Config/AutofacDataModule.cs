@@ -15,7 +15,7 @@ namespace MyTrx.Data.Config
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.Register(c => new MyTrxContext(_connectionString)).As<IDbContext>();
+            builder.Register(c => new MyTrxContext(_connectionString)).As<IMyTrxContext>();
             builder.RegisterType<GenericRepository>().As<IRepository>().InstancePerLifetimeScope();
         }
     }

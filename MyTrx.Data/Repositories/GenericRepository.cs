@@ -11,9 +11,9 @@ namespace MyTrx.Data.Repositories
 {
     public class GenericRepository : IRepository
     {
-        private readonly IDbContext _dbContext;
+        private readonly IMyTrxContext _dbContext;
 
-        public GenericRepository(IDbContext dbContext)
+        public GenericRepository(IMyTrxContext dbContext)
         {
             _dbContext = dbContext;
         }

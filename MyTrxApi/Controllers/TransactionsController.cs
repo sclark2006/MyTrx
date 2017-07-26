@@ -2,8 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MyTrx.BusinessLogic.Models;
 using MyTrx.BusinessLogic.Services;
-using MyTrx.Data.Contexts;
-using MyTrx.Data.Repositories;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
