@@ -9,6 +9,7 @@ using Autofac.Extensions.DependencyInjection;
 using MyTrx.Data.Config;
 using MyTrx.BusinessLogic.Config;
 using MyTrx.Api.Config;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace MyTrx.Api
 {
@@ -34,6 +35,12 @@ namespace MyTrx.Api
             // Add framework services.
             services.AddMvc().AddControllersAsServices();
 
+            // Register the Swagger generator, defining one or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "MyTrx Web Api", Version = "v1" });
+            });
+
             var builder = new ContainerBuilder();
             builder.RegisterModule(new AutofacDataModule(Configuration, services));
             builder.RegisterModule(new AutofacBLModule());
@@ -54,6 +61,15 @@ namespace MyTrx.Api
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
             app.UseMvc();
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyTrx Web Api");
+            });
         }
 
     }

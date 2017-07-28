@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MyTrx.BusinessLogic.Models;
 using MyTrx.BusinessLogic.Services;
+using System.ComponentModel.DataAnnotations;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,21 +21,23 @@ namespace MyTrx.Api.Controllers
 
         // GET: api/transactions
         [HttpGet]
-        public IEnumerable<TransactionModel> Get(object options = null)
+        [ProducesResponseType(typeof(IEnumerable<TransactionModel>), 200)]
+        public IActionResult Get(object options = null)
         {
-           return _queryService.GetAll(options); 
+           return Ok( _queryService.GetAll(options)); 
         }
 
         // GET api/transactions/5
         [HttpGet("{id}")]
-        public TransactionModel Get(int id)
+        [ProducesResponseType(typeof(TransactionModel), 200)]
+        public IActionResult Get(int id)
         {
-            return _queryService.GetById(id);
+            return Ok(_queryService.GetById(id));
         }
 
         // POST api/transactions
         [HttpPost]
-        public void Post([FromBody]TransactionModel value)
+        public void Post([FromBody, Required] TransactionModel value)
         {
         }
 
