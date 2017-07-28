@@ -35,7 +35,7 @@ namespace MyTrx.Api
             services.AddMvc().AddControllersAsServices();
 
             var builder = new ContainerBuilder();
-            builder.RegisterModule(new AutofacDataModule(Configuration.GetConnectionString("SqlServerConnection")));
+            builder.RegisterModule(new AutofacDataModule(Configuration, services));
             builder.RegisterModule(new AutofacBLModule());
             builder.RegisterModule(new AutofacApiModule());
             builder.Populate(services);
