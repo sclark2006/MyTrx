@@ -1,22 +1,43 @@
 ﻿using Autofac;
+using Microsoft.EntityFrameworkCore;
+using MySQL.Data.EntityFrameworkCore.Extensions;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using MyTrx.Data.Contexts;
 using MyTrx.Data.Repositories;
+using System.Collections.Generic;
+using System;
 
 namespace MyTrx.Data.Config
 {
     public class AutofacDataModule : Module
     {
-        private readonly string _connectionString;
 
-        public AutofacDataModule(string connectionString)
+        public AutofacDataModule(IConfigurationRoot configuration, IServiceCollection services)
         {
-            _connectionString = connectionString;
+            var connType = configuration.GetConnectionString("ConnectionType");
+            var connectionString = configuration.GetConnectionString(connType);
+
+            services.AddDbContext<MyTrxContext>(options =>  ConfigureDbContext(options, connType, connectionString));
         }
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.Register(c => new MyTrxContext(_connectionString)).As<IMyTrxContext>();
+            builder.RegisterType<MyTrxContext>().As<IMyTrxContext>();
             builder.RegisterType<GenericRepository>().As<IRepository>().InstancePerLifetimeScope();
+        }
+
+        private DbContextOptionsBuilder ConfigureDbContext(DbContextOptionsBuilder options, string connType, string connectionString)
+        {
+            if(connType.ToLower().StartsWith("mysql"))
+            {
+                return options.UseMySQL(connectionString);
+            }
+            else
+            {
+                return options.UseSqlServer(connectionString);
+            }
+
         }
     }
 }
