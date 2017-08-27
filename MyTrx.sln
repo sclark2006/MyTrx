@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrx.Data", "MyTrx.Data\My
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrx.BusinessLogic", "MyTrx.BusinessLogic\MyTrx.BusinessLogic.csproj", "{53FAA189-1833-4F6A-9BE9-8903B2BBF0A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTrx.Test", "..\MyTrx.Test\MyTrx.Test.csproj", "{B59620C8-AF65-4D83-89F7-AE7AD3A00AA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrx.Test", "MyTrx.Test\MyTrx.Test.csproj", "{3CA6BD54-55AB-4863-A9E7-715BEEF92959}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{53FAA189-1833-4F6A-9BE9-8903B2BBF0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53FAA189-1833-4F6A-9BE9-8903B2BBF0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53FAA189-1833-4F6A-9BE9-8903B2BBF0A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B59620C8-AF65-4D83-89F7-AE7AD3A00AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B59620C8-AF65-4D83-89F7-AE7AD3A00AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B59620C8-AF65-4D83-89F7-AE7AD3A00AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B59620C8-AF65-4D83-89F7-AE7AD3A00AA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CA6BD54-55AB-4863-A9E7-715BEEF92959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA6BD54-55AB-4863-A9E7-715BEEF92959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA6BD54-55AB-4863-A9E7-715BEEF92959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA6BD54-55AB-4863-A9E7-715BEEF92959}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
