@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
-namespace MyTrx_Web.Controllers
+namespace MyTrx.Api.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller

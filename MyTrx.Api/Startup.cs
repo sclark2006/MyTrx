@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Cors;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using MyTrx.Data.Config;
@@ -32,6 +33,10 @@ namespace MyTrx.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+            //services.AddCors(options =>
+            //    options.AddPolicy("AllowAllOrigins", policyBuilder => { policyBuilder.AllowAnyOrigin(); }
+            //    ));
             // Add framework services.
             services.AddMvc().AddControllersAsServices();
 
@@ -45,9 +50,10 @@ namespace MyTrx.Api
             builder.RegisterModule(new AutofacDataModule(Configuration, services));
             builder.RegisterModule(new AutofacBLModule());
             builder.RegisterModule(new AutofacApiModule());
+
             builder.Populate(services);
             this.ApplicationContainer = builder.Build();
-
+            
             // Create the IServiceProvider based on the container.
             return new AutofacServiceProvider(this.ApplicationContainer);
         }
@@ -60,6 +66,12 @@ namespace MyTrx.Api
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            //app.UseCors("AllowAllOrigins");
+            app.UseCors(builder => builder.WithOrigins("http://localhost:57107/")
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+
             app.UseMvc();
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.
