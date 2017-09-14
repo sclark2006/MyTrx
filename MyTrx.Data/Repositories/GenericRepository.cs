@@ -62,6 +62,12 @@ namespace MyTrx.Data.Repositories
             return query;
         }
 
+        public DbSet<T> GetDbSet<T>(object options) where T : class
+        {
+
+            return _dbContext.Set<T>();
+        }
+
         public T GetById<T>(int id) where T : class, IEntity
         {
             T entity = _dbContext.Find<T>(id);

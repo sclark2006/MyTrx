@@ -4,8 +4,6 @@ using MyTrx.BusinessLogic.Models;
 using MyTrx.BusinessLogic.Services;
 using System.ComponentModel.DataAnnotations;
 
-// For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace MyTrx.Api.Controllers
 {
     [Route("api/[controller]")]

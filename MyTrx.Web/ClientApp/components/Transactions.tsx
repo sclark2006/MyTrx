@@ -36,6 +36,7 @@ export class TransactionData extends React.Component<RouteComponentProps<{}>, Tr
             <thead>
                 <tr>
                     <th>Date</th>
+                    <th>Category</th>
                     <th>Amount</th>
                 </tr>
             </thead>
@@ -43,6 +44,7 @@ export class TransactionData extends React.Component<RouteComponentProps<{}>, Tr
             {transactions.map(trx =>
                 <tr key={ trx.id }>
                         <td>{trx.dateFormatted}</td>
+                        <td>{trx.categoryName}</td>
                         <td>{trx.amount}</td>
                 </tr>
             )}
@@ -53,6 +55,23 @@ export class TransactionData extends React.Component<RouteComponentProps<{}>, Tr
 
 interface TransactionModel {
     id: number;
-    amount: number;
+    date: Date;
     dateFormatted: string;
+    type: number;
+    typeDescription: string
+    payeeId: number;
+    payeeName: string;
+    amount: number;
+    accountId: number;
+    accountName: string;
+    targetAccountId: number;
+    targetAccountName: string;
+    categoryId: number;
+    categoryName: string;
+    reference: string;
+    cleared: boolean;
+    reconciled: boolean;
+    flag: number;
+    flagDescription: string;
+    note: string;
 }
