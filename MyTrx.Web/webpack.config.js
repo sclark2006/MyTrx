@@ -15,6 +15,9 @@ module.exports = (env) => {
             filename: '[name].js',
             publicPath: 'dist/'
         },
+        externals: {
+            'Config': { "ApiUrl": "http://localhost:57003/api/"}//require('./Config/settings.json')
+        },
         module: {
             rules: [
                 { test: /\.tsx?$/, include: /ClientApp/, use: 'awesome-typescript-loader?silent=true' },

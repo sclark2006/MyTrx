@@ -10,6 +10,11 @@ namespace MyTrx.BusinessLogic.Models
     {
         public int Id { get; set; }
         public decimal Amount { get; set; }
+        public string DateFormatted { get; set; }
 
+        public TransactionModel()
+        {
+            DateFormatted = DateTime.Now.ToString("d");
+        }
     }
 }
