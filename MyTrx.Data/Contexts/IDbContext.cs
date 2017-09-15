@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-
-using MyTrx.Data.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Threading;
 using Microsoft.EntityFrameworkCore.Infrastructure;

@@ -21,7 +21,7 @@ namespace MyTrx.Data.Entities
         public int TargetAccountId { get; set; }
         public virtual Account TargetAccount { get; set; }
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
         public string Reference { get; set; }
         public bool Cleared { get; set; }
         public bool Reconciled { get; set; }

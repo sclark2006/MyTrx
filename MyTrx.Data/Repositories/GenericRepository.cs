@@ -1,9 +1,7 @@
 ﻿using MyTrx.Data.Contexts;
 using MyTrx.Data.Entities;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 
@@ -56,16 +54,18 @@ namespace MyTrx.Data.Repositories
             return query;
         }
 
-        public IQueryable<T> GetAll<T>(object options) where T : class
+        public IQueryable<T> GetAll<T>(params string[] propertiesToInclude) where T : class
         {
-            var query = _dbContext.Set<T>();
+            IQueryable<T> query = _dbContext.Set<T>();
+            if(propertiesToInclude.Length > 0)
+            {
+                foreach (var prop in propertiesToInclude)
+                {
+                    query = query.Include(prop);
+                }                
+            }
+                
             return query;
-        }
-
-        public DbSet<T> GetDbSet<T>(object options) where T : class
-        {
-
-            return _dbContext.Set<T>();
         }
 
         public T GetById<T>(int id) where T : class, IEntity

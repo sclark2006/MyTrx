@@ -33,9 +33,15 @@ namespace MyTrx.BusinessLogic.Services
 
         public IEnumerable<TransactionModel> GetAll(object options)
         {
-            //var transactions = _repository.GetDbSet<Transaction>(options);
-            var transactions = _repository.GetAll<Transaction>(options).ToList();
-            return transactions.Select(entity => MapToListModel(entity));
+            var transactions = _repository.GetAll<Transaction>("Category","Payee","Account").OrderBy(x => x.Date).ThenBy(x => x.Id);
+            var result =  transactions.Select(entity => MapToListModel(entity)).ToList();
+            if(result.Any())
+            {
+                var first = result.First();
+                first.RunningBalance = first.Amount;
+                result.Aggregate((prev, current) => { current.RunningBalance = prev.RunningBalance + current.Amount; return current; });
+            }
+            return result;
         }
 
         public TransactionModel MapToListModel(Transaction transaction)
@@ -57,27 +63,14 @@ namespace MyTrx.BusinessLogic.Services
 
         public TransactionModel MapToEditModel(Transaction transaction)
         {
-            return new TransactionModel
-            {
-                Id = transaction.Id,
-                Date = transaction.Date,
-                Type = transaction.Type,
-                AccountId = transaction.AccountId,
-                AccountName = transaction.Account?.Name,
-                PayeeId = transaction.PayeeId,
-                PayeeName = transaction.Payee?.Name,
-                CategoryId = transaction.CategoryId,
-                CategoryName = transaction.Category?.Name,
-                Amount = transaction.Amount,
-                Cleared = transaction.Cleared,
-                Flag = transaction.Flag,
-                Reconciled = transaction.Reconciled,
-                TargetAccountId = transaction.TargetAccountId,
-                TargetAccountName = transaction.TargetAccount?.Name,
-                Note = transaction.Note,
-                Reference = transaction.Reference
+            var result = MapToListModel(transaction);
 
-            };
+            result.AccountId = transaction.AccountId;
+            result.PayeeId = transaction.PayeeId;
+            result.CategoryId = transaction.CategoryId;
+            result.TargetAccountId = transaction.TargetAccountId;
+
+            return result;
         }        
 
         public IEnumerable<TransactionModel> FindByPayee(int payeeId)

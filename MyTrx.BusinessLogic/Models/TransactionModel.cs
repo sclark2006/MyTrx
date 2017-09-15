@@ -12,6 +12,9 @@ namespace MyTrx.BusinessLogic.Models
         public int PayeeId { get; set; }
         public string PayeeName { get; set; }
         public decimal Amount { get; set; }
+        public decimal Outflow { get { return Amount < 0 ? Amount : 0; } }
+        public decimal Inflow { get { return Amount > 0 ? Amount : 0; } }
+        public decimal RunningBalance { get; set; }
         public int AccountId { get; set; }
         public string AccountName { get; set; }
         public DateTime Date { get; set; }

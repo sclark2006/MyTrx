@@ -35,17 +35,30 @@ export class TransactionData extends React.Component<RouteComponentProps<{}>, Tr
         return <table className='table'>
             <thead>
                 <tr>
+                    <th>Flag</th>
+                    <th>Account</th>
                     <th>Date</th>
+                    <th>Payee</th>
                     <th>Category</th>
-                    <th>Amount</th>
+                    <th>Note</th>
+                    <th>Outflow</th>
+                    <th>Inflow</th>
+                    <th>Balance</th>
                 </tr>
             </thead>
             <tbody>
             {transactions.map(trx =>
-                <tr key={ trx.id }>
+                    <tr key={trx.id}>
+                        <td><span className={'glyphicon glyphicon-tag flag-'+trx.flagDescription}></span></td>
+                        <td>{trx.accountName}</td>
                         <td>{trx.dateFormatted}</td>
+                        <td>{trx.payeeName}</td>
                         <td>{trx.categoryName}</td>
-                        <td>{trx.amount}</td>
+                        <td>{trx.note}</td>
+                        <td>{trx.outflow}</td>
+                        <td>{trx.inflow}</td>
+                        <td>{trx.runningBalance}</td>
+                        <td><span className={'glyphicon glyphicon-copyright-mark is-' + (trx.cleared ? 'cleared':'uncleared') }></span></td>
                 </tr>
             )}
             </tbody>
@@ -74,4 +87,7 @@ interface TransactionModel {
     flag: number;
     flagDescription: string;
     note: string;
+    outflow: number;
+    inflow: number;
+    runningBalance: number;
 }
