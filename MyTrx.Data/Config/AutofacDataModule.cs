@@ -19,6 +19,7 @@ namespace MyTrx.Data.Config
             var connectionString = configuration.GetConnectionString(connType);
 
             services.AddDbContext<MyTrxContext>(options =>  ConfigureDbContext(options, connType, connectionString));
+            services.AddTransient<MyTrxInitialData>();
         }
 
         protected override void Load(ContainerBuilder builder)

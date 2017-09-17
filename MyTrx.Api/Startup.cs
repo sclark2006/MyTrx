@@ -11,6 +11,7 @@ using MyTrx.Data.Config;
 using MyTrx.BusinessLogic.Config;
 using MyTrx.Api.Config;
 using Swashbuckle.AspNetCore.Swagger;
+using MyTrx.Data.Contexts;
 
 namespace MyTrx.Api
 {
@@ -62,7 +63,9 @@ namespace MyTrx.Api
         public void Configure(
             IApplicationBuilder app,
             IHostingEnvironment env,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            MyTrxInitialData seeder
+            )
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -82,6 +85,18 @@ namespace MyTrx.Api
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyTrx Web Api");
             });
+
+            //Populate Initial Data
+            try
+            {
+                seeder.SeedData().Wait();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
 
     }
