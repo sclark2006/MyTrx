@@ -1,3 +1,5 @@
 .vs
 obj
 bin
+/MyTrx.Api/Config/appsettings.json
+/MyTrx.Data/Config/appsettings.json

@@ -13,7 +13,7 @@ namespace MyTrx.Data.Contexts
     }
     public class MyTrxContext : DbContext, IMyTrxContext
     {
-        public MyTrxContext(DbContextOptions<MyTrxContext> options)
+        public MyTrxContext(DbContextOptions options)
         :base(options)
         {
         }
