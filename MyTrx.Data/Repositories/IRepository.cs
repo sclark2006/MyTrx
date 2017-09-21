@@ -8,6 +8,7 @@ namespace MyTrx.Data.Repositories
 {
     public interface IRepository : IDisposable
     {
+        IQueryable<T> GetAll<T>() where T : class;
         IQueryable<T> GetAll<T>(params string[] propertiesToInclude) where T : class;
         IQueryable<T> FindBy<T>(Expression<Func<T, bool>> predicate) where T : class;
         T GetById<T>(int id) where T : class, IEntity;

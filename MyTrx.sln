@@ -13,8 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrx.Test", "MyTrx.Test\My
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrx.Web", "MyTrx.Web\MyTrx.Web.csproj", "{3FE24EAE-5F84-497E-87F1-9A645C3002FB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{929D5C87-BE9F-4503-87C8-9F2E8A29EE94}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{29F1672E-D178-4090-8148-2157DD11CC45}"
 	ProjectSection(SolutionItems) = preProject
+		Config\appsettings.default.json = Config\appsettings.default.json
 		Config\appsettings.Development.json = Config\appsettings.Development.json
 		Config\appsettings.json = Config\appsettings.json
 	EndProjectSection

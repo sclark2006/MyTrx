@@ -54,6 +54,11 @@ namespace MyTrx.Data.Repositories
             return query;
         }
 
+        public IQueryable<T> GetAll<T>() where T : class
+        {
+            return GetAll<T>(new string[] { });
+        }
+
         public IQueryable<T> GetAll<T>(params string[] propertiesToInclude) where T : class
         {
             IQueryable<T> query = _dbContext.Set<T>();
