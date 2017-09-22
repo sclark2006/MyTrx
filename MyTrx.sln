@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{29F167
 		Config\appsettings.json = Config\appsettings.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GentelellaReact", "GentelellaReact\GentelellaReact.csproj", "{DDA1AF95-0757-494E-AC17-734AAED240D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{3FE24EAE-5F84-497E-87F1-9A645C3002FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FE24EAE-5F84-497E-87F1-9A645C3002FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FE24EAE-5F84-497E-87F1-9A645C3002FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA1AF95-0757-494E-AC17-734AAED240D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA1AF95-0757-494E-AC17-734AAED240D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA1AF95-0757-494E-AC17-734AAED240D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA1AF95-0757-494E-AC17-734AAED240D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
