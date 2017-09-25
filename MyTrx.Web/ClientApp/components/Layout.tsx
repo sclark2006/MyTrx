@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavMenu } from './NavMenu';
+import { SideNavMenu } from './SideNavMenu';
 
 export interface LayoutProps {
     children?: React.ReactNode;
@@ -7,15 +7,33 @@ export interface LayoutProps {
 
 export class Layout extends React.Component<LayoutProps, {}> {
     public render() {
-        return <div className='container-fluid'>
-            <div className='row'>
-                <div className='col-sm-3'>
-                    <NavMenu />
+        return <div className='main_container'>
+                <div className='col-md-3 left_col'>
+                    <div className='left_col scroll-view'>
+                        <div className='navbar nav_title'>
+                            <a href="index.html" className="site_title">
+                                <i className="fa fa-paw"></i>
+                            <span>Gentelella Alela!</span></a>
+                        </div>
+
+                        <div className="clearfix"></div>
+
+                        <div className="profile clearfix">
+                            <div className="profile_pic">
+                                <img src="images/img.jpg" alt="..." className="img-circle profile_img"/>
+                            </div>
+                            <div className="profile_info">
+                                <span>Welcome,</span>
+                                <h2>John Doe</h2>
+                            </div>
+                        </div>
+                        <br />
+                        <SideNavMenu />
+                    </div>
                 </div>
-                <div className='col-sm-9'>
-                    { this.props.children }
+                <div className='right_col' role='main'>
+                    {this.props.children}
                 </div>
-            </div>
-        </div>;
+            </div>;
     }
 }

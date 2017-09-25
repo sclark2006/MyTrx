@@ -9,6 +9,19 @@
 
   <ItemGroup>
     <Content Include="ClientApp\config.tsx" />
+    <Content Include="ClientApp\css\custom.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="ClientApp\css\custom.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="ClientApp\images\back_disabled.png" />
+    <Content Include="ClientApp\images\back_enabled.png" />
+    <Content Include="ClientApp\images\back_enabled_hover.png" />
+    <Content Include="ClientApp\images\forward_disabled.png" />
+    <Content Include="ClientApp\images\forward_enabled.png" />
+    <Content Include="ClientApp\images\forward_enabled_hover.png" />
+    <Content Include="ClientApp\images\loading.gif" />
   </ItemGroup>
 
   <ItemGroup>
