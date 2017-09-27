@@ -63,34 +63,4 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .flag-None {
-        color:white;
-    }
-    .flag-Red {
-        color: red;
-    }
-    .flag-Blue {
-        color: blue;
-    }
-    .flag-Yellow {
-        color: yellow;
-    }
-    .flag-Orange {
-        color: orange;
-    }
-    .flag-Green {
-        color: green;
-    }
-    .flag-Purple {
-        color: purple;
-    }
-    .flag-Black {
-        color: black;
-    }
-    .is-cleared {
-        color: green;
-    }
-    .is-uncleared {
-        color: gray;
-    }
 }

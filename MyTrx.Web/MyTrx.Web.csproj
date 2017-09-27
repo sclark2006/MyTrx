@@ -18,6 +18,7 @@
     <Content Include="ClientApp\images\back_disabled.png" />
     <Content Include="ClientApp\images\back_enabled.png" />
     <Content Include="ClientApp\images\back_enabled_hover.png" />
+    <Content Include="ClientApp\images\fontawesome-webfont.svg" />
     <Content Include="ClientApp\images\forward_disabled.png" />
     <Content Include="ClientApp\images\forward_enabled.png" />
     <Content Include="ClientApp\images\forward_enabled_hover.png" />

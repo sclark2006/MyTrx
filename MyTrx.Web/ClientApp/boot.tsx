@@ -1,5 +1,5 @@
 //import './css/site.css';
-import './css/custom.css';
+import 'jquery';
 import 'bootstrap';
 import "font-awesome/css/font-awesome.css";
 import * as React from 'react';
@@ -7,6 +7,9 @@ import * as ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
 import * as RoutesModule from './routes';
+import './css/custom.css';
+import './js/custom.js';
+
 let routes = RoutesModule.routes;
 
 function renderApp() {

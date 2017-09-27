@@ -13,15 +13,12 @@ export class Layout extends React.Component<LayoutProps, {}> {
                         <div className='navbar nav_title'>
                             <a href="index.html" className="site_title">
                                 <i className="fa fa-paw"></i>
-                            <span>Gentelella Alela!</span></a>
+                            <span>My Trx </span></a>
                         </div>
 
                         <div className="clearfix"></div>
 
                         <div className="profile clearfix">
-                            <div className="profile_pic">
-                                <img src="images/img.jpg" alt="..." className="img-circle profile_img"/>
-                            </div>
                             <div className="profile_info">
                                 <span>Welcome,</span>
                                 <h2>John Doe</h2>
