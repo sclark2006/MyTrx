@@ -1,6 +1,7 @@
-//import './css/site.css';
 import 'jquery';
 import 'bootstrap';
+import 'nprogress';
+import 'fastclick';
 import "font-awesome/css/font-awesome.css";
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
